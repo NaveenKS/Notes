@@ -26,6 +26,6 @@ Source -> channel ->sink
 
 3.Hbase
 *This is built on top of HDFS
-*Used for random reads.
+*Used for random reads
 
 
