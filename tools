@@ -1,0 +1,31 @@
+1.Hive
+*It is a query language like sql which is build on top map reduce.People who are acquainted with sql can use this to query on large data.
+*Running a hive will run hadoop at the backend.
+*User Defined function can be developed in hive.
+
+2.Flume
+*For example with respect to netapp auto support data:
+The asup which comes from filers are put into various sinks like HDFS,HBASE..etc
+by this flume.
+
+Source->channel->sink(basic architectutre) 
+
+*Queuing(Asup data in which asup_id is assigned)
+*Directory watcher client would distribute the work among 2 blades in HA1|HA2
+*In that blade header parser,body parser agent will take the event and process it.
+*This processed is put in to sink.
+
+Event:
+------------
+Header:data|
+Body:data  |
+------------
+
+Each agent will be of the form
+Source -> channel ->sink
+
+3.Hbase
+*This is built on top of HDFS
+*Used for random reads.
+
+

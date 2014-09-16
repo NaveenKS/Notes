@@ -1,0 +1,24 @@
+Tools that makes the build easy
+
+*Ant
+*Maven
+*Jenkins
+
+1.Ant:Another neat tool(Developed by James Duncun Davidson)
+
+*Ant script is written in build.xml
+*Various Targets are defined in the build.xml file.
+*Inbuilt functionality(tasks) are used to perform clean,build,deployment etc
+*These targets can be made to run sequentially like clean->build->deploy
+using depends attribute.
+*There is no life cycle.
+*IVy is used for managing dependencies
+
+2.Maven
+
+*Get dependencies
+*Has life cycle
+*Specified in pom.xml
+
+3.Jenkins:A tool to control the workflow of build and deployment.
+
