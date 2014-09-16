@@ -61,7 +61,7 @@ Nodes are created across multiple machines(hadoop cluster).One Map task runs on 
 HDFS has two nodes 
 
 *namenode - It stores the metadata of the existing data.
-*datanode - It stores the actual data.
+*datanode - It stores the actual data
 
 
 
