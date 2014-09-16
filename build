@@ -20,5 +20,5 @@ using depends attribute.
 *Has life cycle
 *Specified in pom.xml
 
-3.Jenkins:A tool to control the workflow of build and deployment.
+3.Jenkins:A tool to control the workflow of build and deployment
 
