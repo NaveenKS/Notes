@@ -1,22 +1,63 @@
-Perforce:
-#write on how to use perforce and integrate with eclipse
+->Perforce:
+#how to use perforce and integrate with eclipse
+Things to do in P4 software:
 
-Maven to build properly in eclipse folder structure(classes inside package):
+*New client is created i.e create a workspace in the local environment to store the files when anything is checked out from the perforce.
+*while creating this, mapping is done which maps remote path to local path so that directories are visible.
 
+In eclipse:
+
+*Plugin for perforce in installed.
+*New connection is created in which the workspace name is specified.
+*Import  of the code is done.
+
+->Maven to build properly in eclipse, to preserve the eclipse package structure(classes inside package):
+#when the code is checked in from perforce,Run these commands so that packages and all will come properly in eclipse:
 1. mvn eclipse:clean  - This will delete .classpath, .project, and target classes.
 2. mvn eclipse:eclipse - This will run the resource ready phase and download all the dependencies to maven repo, and create .classpath, .project etc.
 3. mvn clean install -Dmaven.compiler.source=1.7 -Dmaven.compiler.target=1.7 -DskipTests - (-Dmaven.compiler.source=1.7) this is to change the jre version to 1.7,(-DskipTests) this is to skip the junit tests.
 
-Git:
+->Git:
 #How to use git
+*git add .
+*git status
+*git commit -m "a"
+*git remote -v
+*git remote add-repositoy origin  "git-repo"
+*git push origin master
+*git pull
 
-Java
-
+->Java
+#Changing jre version in eclipse
 To change the version of jre in eclipse for a specific project:
 
-1.Right click on jre library dependency->build path->configure->Libraries->JRE System library->edit:U can change the version from the dropdown here. 
+1.Right click on jre library 
+2.dependency->build path->configure->Libraries->JRE System library
+3.edit:U can change the version from the dropdown here. 
 
-ant
-
+->ant
+#for loop in ant
 1.contrib-tasks
-#regarding that for loop which was not included
+*In contrib-tasks jar, there is a file  which defines the tasks(referring to classes)) that could be used in the ant.
+*In this for task has been commented out.
+*To use for u shd uncomment it.
+
+->ssh
+#how to do password-less login to a remote machine
+
+A->B - maachine A wants to login in Machine B.
+
+@A - ssh-keygen -t rsa
+
+In ~/.ssh : id_rsa(private key),id_rsa.pub(public key) are created
+
+@B create a directory .ssh under home 
+
+@A cat id_rsa.pub | ssh user@ip-address 'cat >> ~/.ssh/authorized_keys' 
+copy A's public key in B's .ssh directory and name the file as authorized_keys.
+
+Now when A try to connect with B:
+
+It will take A's private key stored in A and  compare it with the A's public keystored in B.
+
+

@@ -8,17 +8,60 @@ Tools that makes the build easy
 
 *Ant script is written in build.xml
 *Various Targets are defined in the build.xml file.
-*Inbuilt functionality(tasks) are used to perform clean,build,deployment etc
+*Inbuilt functionality(tasks) are used to perform various tasks like clean,build,deployment,scp,ssh almost everything etc.
 *These targets can be made to run sequentially like clean->build->deploy
 using depends attribute.
-*There is no life cycle.
+*There is no life cycle in ant.
 *IVy is used for managing dependencies
+*In order to remove the dependency on the operating system as in windows,unix commands differ from each other(ls in unix, dir in windows), various tasks were created, independent on the os ex In Make which was used to build, shell commands are used(ls in unix, dir in windows - so it differs)
 
 2.Maven
 
-*Get dependencies
-*Has life cycle
-*Specified in pom.xml
+It is also build and deployment tool.
 
-3.Jenkins:A tool to control the workflow of build and deployment
+It has three components :
+
+1.life cycle - default, clean, site
+2.phases
+3.goals
+
+Each lifecycle consists of many phases and each phase consists of many goals
+
+->default - phases in default are :
+
+
+*validate: validate the project is correct and all necessary information is available
+*compile: compile the source code of the project
+*test: test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+*package: take the compiled code and package it in its distributable format, such as a JAR.
+*integration-test: process and deploy the package if necessary into an environment where integration tests can be run
+*verify: run any checks to verify the package is valid and meets quality criteria
+*install: install the package into the local repository, for use as a dependency in other projects locally
+*deploy: done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+If i give mvn install : then all the phases before it are also run.
+
+->clean : It will clean the target classes.
+
+->site : create documentation
+
+Default cannot be given directly but phases in that can be given.But other life cycles can be given directly.
+ex mvn clean install
+
+
+*Has life cycle
+*Specified in pom.xml(like build.xml in ant)
+
+3.Jenkins:This is a continous integration(ci) tool to automate  build and deployment.
+
+*This controls the workflow as in calling various things one by one sequentially to serve the purpose. 
+
+For example:
+->checkout code from perforce
+->build code using maven, produce jar
+->run ant to deploy to remote machine
+
+Like this u can run anything even a shell commands
+
+*It has a quite a large plugin for various purposes.
 
