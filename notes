@@ -1,0 +1,22 @@
+Perforce:
+#write on how to use perforce and integrate with eclipse
+
+Maven to build properly in eclipse folder structure(classes inside package):
+
+1. mvn eclipse:clean  - This will delete .classpath, .project, and target classes.
+2. mvn eclipse:eclipse - This will run the resource ready phase and download all the dependencies to maven repo, and create .classpath, .project etc.
+3. mvn clean install -Dmaven.compiler.source=1.7 -Dmaven.compiler.target=1.7 -DskipTests - (-Dmaven.compiler.source=1.7) this is to change the jre version to 1.7,(-DskipTests) this is to skip the junit tests.
+
+Git:
+#How to use git
+
+Java
+
+To change the version of jre in eclipse for a specific project:
+
+1.Right click on jre library dependency->build path->configure->Libraries->JRE System library->edit:U can change the version from the dropdown here. 
+
+ant
+
+1.contrib-tasks
+#regarding that for loop which was not included

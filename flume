@@ -1,0 +1,32 @@
+path where flume is located in environment
+
+1. /opt/cloudera/parcels/CDH-5.1.2-1.cdh5.1.2.p0.3/lib/flume-ng
+2. here conf is pointing to conf-> /etc/flume-ng/conf
+3. again this conf is also pointing somewhere conf -> /etc/alternatives/flume-ng-conf
+4. And now it comes out to be there is no flume-ng-conf in /etc/alernatives
+
+symbolic link created in load folder:
+
+ln -s /willows/bpc/hadoop_logs/HOME/asupdwd/neuro/translation/conf/2012040605510024.tgz 2012040605510024.tgz
+
+classpath:
+
+/willows/bpc/hadoop_logs/HOME/asupdwd/neuro/translation/bin/*:/opt/cloudera/parcels/CDH-5.1.2-1.cdh5.1.2.p0.3/lib/flume-ng/lib/*:/willows/bpc/hadoop_log/op_logs/HOME/asupdwd/neuro/translation/lib/*
+	
+flume command:
+
+flume-ng agent  -n translation -c /willows/bpc/hadoop_logs/HOME/asupdwd/neuro/translation/conf -f /willows/bpc/hadoop_logs/HOME/asupdwd/neuro/translation/conf/translation-agent.conf
+
+Directory watcher client:
+
+bin/java -Xms100m -Xmx200m -cp '/willows/bpc/hadoop_logs/HOME/asupdwd/neuro/translation/bin/*:/willows/bpc/hadoop_log/op_logs/HOME/asupdwd/neuro/translation/lib/*:/opt/cloudera/parcels/CDH-5.1.2-1.cdh5.1.2.p0.3/lib/flume-ng/lib/*' com.netapp.neuro.flume.client.DirWatcherClient
+
+remote connect to environment:
+
+ssh ksn@rtpwil-bigdata-pc05.rtp.netapp.com
+
+remote connect to jenkins:
+
+
+
+
