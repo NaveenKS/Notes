@@ -1,3 +1,3 @@
-Notes
-=====
-This gives a breif decrption on details of various tools.
+#Notes
+
+###This gives a detailed decrption on various tools.
