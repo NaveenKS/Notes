@@ -74,4 +74,25 @@ sudo apt-get update it is not hitting archive.ubuntu.in where all these packages
 
 *To solve this disconnect and connnect to internet and run update again.
 
+#JAVA CODING 
+--info
+*Always design the framework better while coding anything.Don't do it just for the heck of doing.
+*Always think in terms of oops terms(like classes,interfaces and all)
+*If u know previously that words would be this only use enum efectively
+*U can define variable,function,constructor in enum(It would be just like a class)
+Abstract class:
+*when there is a function that is repeated across classes then this would come in handy with the other classes extending the abstract class.
+*classes
+
+--concepts
+classes
+abstract class
+extends(inheritence)
+interface
+implements
+objects
+singleton class
+enums
+
+*You can create many classes inside a single main class.If u do like that then the methods implemented in the main class is visible to the other inner classes(They can use just like calling other normal functions.)
 
