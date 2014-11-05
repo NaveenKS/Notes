@@ -60,4 +60,18 @@ Now when A try to connect with B:
 
 It will take A's private key stored in A and  compare it with the A's public keystored in B.
 
+->apt
+#why a package doesn't show up when u remove and try to install it again.
+
+*when I run
+
+sudo apt-get purge package-name
+sudo apt-get update
+sudo apt-get install package-name
+	error : No installation candidate
+*This is because when we run 
+sudo apt-get update it is not hitting archive.ubuntu.in where all these packages are referrenced.
+
+*To solve this disconnect and connnect to internet and run update again.
+
 
