@@ -1,0 +1,48 @@
+#JAVA 
+
+#JVM
+
+->A java code is writte in a .java file 
+->Javac compliler would compile this .java file and produce a .class file
+->the .class file is nothing but the bytecode
+->this bytecode is like the machine code for the jvm
+->Then jvm would convert this bytecode to the machine code specific to the machine.
+->This is the reason the bytecodes are portable.
+
+#JAVA is a platform
+
+A platform is an environment where the program runs.It can be hardware or a sofware for ex(windows,linux etc).JAVA is a software platform which maiky consist of:
+
+*JVM
+*JAVA API
+
+JAVA API is a large library(ready made code).So the JVM would take care of producing the machine code to the machine.
+
+#JAVA CONCEPTS
+
+->Object:It is a bundle consisting of state(fields) and behavior(method).
+->Class:It is a blue print for which the objects are created.
+->Inheritence:subclass extending the common functionality of the parent class.
+->Interphase:It is contract signed by a class to implement the functions defined in a interface.
+->polymorphism:In different forms(function overloading).
+->Abstract:If there is repetition of a functionality in the child classes then define parent as abstract and keep the repitition in parent.
+Abstract class can't be instantiated.
+->Genrics:Passing of parameters as type<E> to classes,methods. 
+->Annotation:It is like a metadata to the compiler(ex:@test)
+->Exception:It is an event which would cause the disruption of the normal flow.It depends how u want to handle that event.
+->Stream:It is like a pipe with two ends and at one end u the put the data and on the other end it starts to flush to the file.
+Internally it would store some data in buffer so to make sure everything goes out u say flush then write.
+It is always good to close the stream, otherwise resource leak would happen.When we open a stream then os would allot a file handle(file handles are fixed).This file handler will be released when a stream is closed.
+->Data streams are used to write the data of specific data type say int,double int ect.
+->Collection - it is an object which stores similar elements in to a single unit.
+*Interphase:contract
+*Implementation:hash,tree,linked list
+*Algo:sorted etc
+
+Set:Elements can't be repeated.(Implementation: Hashset,Treeset,Linkedlistset)
+List:Elements can be accessed through the index.Elements can be repeated(Implementation:Arraylist,Linked list).
+Queue
+Dequeue
+Map:(key,value):(Implementation:Hash,tree,linked)
+
+
