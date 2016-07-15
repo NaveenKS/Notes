@@ -1,3 +1,3 @@
 #Notes
 
-This gives a detailed decrption on various technologies.
+It contans detailed decrption on various technologies.
